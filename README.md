@@ -14,7 +14,7 @@ Python, Apache Kafka, Redis, PostgreSQL, FastAPI, Docker Compose
                   │                                                        │
   POST /features/ │   FastAPI API                                          │
   write ─────────►│     │                                                  │
-                  │     ├──► PostgreSQL (offline store)                     │
+                  │     ├──► PostgreSQL (offline store)                    │
                   │     │     append-only feature_values table             │
                   │     │     with PIT indexes                             │
                   │     │                                                  │
@@ -26,7 +26,7 @@ Python, Apache Kafka, Redis, PostgreSQL, FastAPI, Docker Compose
                   │               └──► Redis (online, low-latency)         │
                   │                                                        │
   POST /features/ │                                                        │
-  online ◄────────│   Redis ◄── hash per entity, TTL-managed              │
+  online ◄────────│   Redis ◄── hash per entity, TTL-managed               │
                   │                                                        │
   POST /features/ │                                                        │
   historical ◄────│   PostgreSQL ◄── LATERAL JOIN PIT query                │
