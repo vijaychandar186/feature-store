@@ -31,7 +31,7 @@ Python, Apache Kafka, Redis, PostgreSQL, FastAPI, Docker Compose
   POST /features/ │                                                        │
   historical ◄────│   PostgreSQL ◄── LATERAL JOIN PIT query                │
                   │                                                        │
-  POST /materialize│                                                       │
+POST /materialize │                                                        │
   /{view}/sync ──►│   Batch materialization: PG → Redis (with Redis lock)  │
                   │                                                        │
   POST /schemas  ─│─► Schema Registry (PG-backed, Redis-cached)            │
